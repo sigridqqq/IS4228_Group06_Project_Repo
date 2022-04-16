@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer, HashingVectorizer, TfidfVectorizer
 from scipy import sparse 
 
+# change category value accordingly
 category = 'cool'
 print(f"currently running for {category}")
 
