@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np 
 from tqdm import tqdm
 
+# change category value accordingly
 category = 'cool'
 print(f"currently running for {category}")
 
@@ -31,19 +32,6 @@ print("after dropna")
 for i in [train, val, test]:
     print(i.shape)
 
-##############################################################
-# train_sample = train.sample(frac = 0.0001, random_state = 1)
-# train = train_sample
-
-# val_sample = val.sample(frac = 0.0001, random_state = 1)
-# val = val_sample
-
-# test_sample = test.sample(frac = 0.0001, random_state = 1)
-# test = test_sample
-
-# for i in [train, val, test]:
-#     print(i.shape)
-##############################################################
 
 print("------- current model: SentenceBERT -------")
 model = 'sbert'
