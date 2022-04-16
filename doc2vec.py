@@ -31,20 +31,6 @@ print("after dropna")
 for i in [train, val, test]:
     print(i.shape)
 
-##############################################################
-# train_sample = train.sample(frac = 0.0001, random_state = 1)
-# train = train_sample
-
-# val_sample = val.sample(frac = 0.0001, random_state = 1)
-# val = val_sample
-
-# test_sample = test.sample(frac = 0.0001, random_state = 1)
-# test = test_sample
-
-# for i in [train, val, test]:
-#     print(i.shape)
-##############################################################
-
 print("------- current model: Doc2Vec -------")
 import nltk
 nltk.download('punkt')
