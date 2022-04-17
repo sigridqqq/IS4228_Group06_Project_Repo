@@ -42,64 +42,64 @@ print("------- current model: TF-IDF Vectorizer -------")
 model = 'tfidf_1gram'
 vect = TfidfVectorizer(ngram_range = (1, 1))
 transformed_train_text = vect.fit_transform(train['cleaned_text'])
-sparse.save_npz(f"processed_text/{category}_{model}_train.npz", transformed_train_text)
+sparse.save_npz(f"text_processing/{category}_{model}_train.npz", transformed_train_text)
 
 for data in ['eval', 'test']:
     df = data_dict[data]
     transformed_text = vect.transform(df['cleaned_text'])
-    sparse.save_npz(f"processed_text/{category}_{model}_{data}.npz", transformed_text)
+    sparse.save_npz(f"text_processing/{category}_{model}_{data}.npz", transformed_text)
 
 model = 'tfidf_2gram'
 vect = TfidfVectorizer(ngram_range = (2, 2))
 transformed_train_text = vect.fit_transform(train['cleaned_text'])
-sparse.save_npz(f"processed_text/{category}_{model}_train.npz", transformed_train_text)
+sparse.save_npz(f"text_processing/{category}_{model}_train.npz", transformed_train_text)
 
 for data in ['eval', 'test']:
     df = data_dict[data]
     transformed_text = vect.transform(df['cleaned_text'])
-    sparse.save_npz(f"processed_text/{category}_{model}_{data}.npz", transformed_text)
+    sparse.save_npz(f"text_processing/{category}_{model}_{data}.npz", transformed_text)
 
 
 print("------- current model: Count Vectorizer -------")
 model = 'count_1gram'
 vect = CountVectorizer(ngram_range = (1, 1))
 transformed_train_text = vect.fit_transform(train['cleaned_text'])
-sparse.save_npz(f"processed_text/{category}_{model}_train.npz", transformed_train_text)
+sparse.save_npz(f"text_processing/{category}_{model}_train.npz", transformed_train_text)
 
 for data in ['eval', 'test']:
     df = data_dict[data]
     transformed_text = vect.transform(df['cleaned_text'])
-    sparse.save_npz(f"processed_text/{category}_{model}_{data}.npz", transformed_text)
+    sparse.save_npz(f"text_processing/{category}_{model}_{data}.npz", transformed_text)
 
 model = 'count_2gram'
 vect = CountVectorizer(ngram_range = (2, 2))
 transformed_train_text = vect.fit_transform(train['cleaned_text'])
-sparse.save_npz(f"processed_text/{category}_{model}_train.npz", transformed_train_text)
+sparse.save_npz(f"text_processing/{category}_{model}_train.npz", transformed_train_text)
 
 for data in ['eval', 'test']:
     df = data_dict[data]
     transformed_text = vect.transform(df['cleaned_text'])
-    sparse.save_npz(f"processed_text/{category}_{model}_{data}.npz", transformed_text)
+    sparse.save_npz(f"text_processing/{category}_{model}_{data}.npz", transformed_text)
 
 
 print("------- current model: Hashing Vectorizer -------")
 model = 'hashing_1gram'
 vect = HashingVectorizer(ngram_range = (1, 1))
 transformed_train_text = vect.fit_transform(train['cleaned_text'])
-sparse.save_npz(f"processed_text/{category}_{model}_train.npz", transformed_train_text)
+sparse.save_npz(f"text_processing/{category}_{model}_train.npz", transformed_train_text)
 
 for data in ['eval', 'test']:
     df = data_dict[data]
     transformed_text = vect.transform(df['cleaned_text'])
-    sparse.save_npz(f"processed_text/{category}_{model}_{data}.npz", transformed_text)
+    sparse.save_npz(f"text_processing/{category}_{model}_{data}.npz", transformed_text)
 
 
 model = 'hashing_2gram'
 vect = HashingVectorizer(ngram_range = (2, 2))
 transformed_train_text = vect.fit_transform(train['cleaned_text'])
-sparse.save_npz(f"processed_text/{category}_{model}_train.npz", transformed_train_text)
+sparse.save_npz(f"text_processing/{category}_{model}_train.npz", transformed_train_text)
 
 for data in ['eval', 'test']:
     df = data_dict[data]
     transformed_text = vect.transform(df['cleaned_text'])
-    sparse.save_npz(f"processed_text/{category}_{model}_{data}.npz", transformed_text)
+    sparse.save_npz(f"text_processing/{category}_{model}_{data}.npz", transformed_text)
