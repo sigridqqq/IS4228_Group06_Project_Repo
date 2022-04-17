@@ -35,26 +35,26 @@ for i in [train, val, test]:
 
 print("------- current model: SentenceBERT -------")
 model = 'sbert'
-SentenceBERT_filename = f'saved_model/{category}_sbert_model.sav'
+# SentenceBERT_filename = f'saved_model/{category}_sbert_model.sav'
 sbert_model = SentenceTransformer('bert-base-nli-mean-tokens')
-pickle.dump(sbert_model, open(SentenceBERT_filename, 'wb'))
+# pickle.dump(sbert_model, open(SentenceBERT_filename, 'wb'))
 
 # for faster loading of sbert_model, can use the following code from the second time of running this script onwards
 # sbert_model = pickle.load(open(sbert_filename, 'rb'))
 
 print("currently encoding train text")
 train_sentence_embeddings = sbert_model.encode(list(train['cleaned_text']))
-with open(f'processed_text/{category}_{model}_train.npy', 'wb') as f:
+with open(f'text_processing/{category}_{model}_train.npy', 'wb') as f:
     np.save(f, train_sentence_embeddings)
 
 print("currently encoding val text")
 val_sentence_embeddings = sbert_model.encode(list(val['cleaned_text']))
-with open(f'processed_text/{category}_{model}_val.npy', 'wb') as f:
+with open(f'text_processing/{category}_{model}_val.npy', 'wb') as f:
     np.save(f, val_sentence_embeddings)
 
 print("currently encoding test text")
 test_sentence_embeddings = sbert_model.encode(list(test['cleaned_text']))
-with open(f'processed_text/{category}_{model}_test.npy', 'wb') as f:
+with open(f'text_processing/{category}_{model}_test.npy', 'wb') as f:
     np.save(f, test_sentence_embeddings)
 
 print('BERT embedding length', len(train_sentence_embeddings[0]))
