@@ -15,6 +15,10 @@ from datasets import Dataset, load_metric
 from transformers import AutoTokenizer, DefaultDataCollator, TFAutoModelForSequenceClassification
 import tensorflow as tf
 
+# To download train.csv, go to https://drive.google.com/file/d/1dkY35gnkHGUDRi4flC8rV3vk_P1LceOL/view?usp=sharing
+# To download val.csv,   go to https://drive.google.com/file/d/1SCzPAb_CAw7AOeLSmPYRsSl-hEmzpKU6/view?usp=sharing
+# To download test.csv,  go to https://drive.google.com/file/d/1xMcG0yjZKEiU85pt92IHIDDWWPZriWcR/view?usp=sharing 
+
 train = pd.read_csv('train.csv')
 val = pd.read_csv('val.csv')
 test = pd.read_csv('test.csv')
