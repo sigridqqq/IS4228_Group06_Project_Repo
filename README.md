@@ -1,7 +1,7 @@
 # BT4222_Group06_Project_Repo
 
 
-In this project, we closely studied the current storage of reviews on Yelp and build models to predict lables for reviews - they can be labeled as funny, cool and/or useful. We performed data analysis on the full review data first. Then we processed the data for model training. We believe by providing real-time review feedback, Yelp users would be motivated to contribute higher quality reviews on the platform.
+In this project, we closely studied the current storage of reviews on Yelp and build models to predict labels for reviews - they can be labeled as funny, cool and/or useful. We performed data analysis on the full review data first. Then we processed the data for model training. We believe by providing real-time review feedback, Yelp users would be motivated to contribute higher quality reviews on the platform.
 
 
 Description of code files in this repo:
