@@ -12,3 +12,8 @@ Description of code files in this repo:
 | Embedding               |doc2vec.py             | Python file used to generate sentence embedding using Doc2Vec |
 | Embedding               |sbert.py               | Python file used to generate sentence embedding using SentenceBERT |
 | Embedding               |vectorizer.py          | Python file used to generate text representation using Tfidf, Hashing, and Count Vecotrizer |
+
+
+Link to download full review CSV: https://drive.google.com/file/d/17uPXOVdgIPFMGH8uScdK6qclE0sby7Ks/view?usp=sharing
+
+Official Yelp Reivew JSON file download: https://www.yelp.com/dataset 
